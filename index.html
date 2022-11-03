@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://kit.fontawesome.com/81cc280855.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__login">
+            <div class="social">
+                <!-- <a target="_blank" href=""><i class="fa-brands fa-facebook logo1"></i></a>
+            <a target="_blank" href="https://www.instagram.com/friki_island_bros_store/?hl=es-la"><i
+                    class="fa-brands fa-instagram logo2"></i></a>
+            <a target="_blank" href=""><i class="fa-brands fa-youtube logo3"></i></a>
+            <a target="_blank" href=""><i class="fa-brands fa-twitter logo4"></i></a> -->
+            </div>
+            <div class="account">
+                <div class="dropdown">
+                    <button class="dropbtn "><i class="fa-solid fa-user user"></i>My Account<i
+                            class="fa-solid fa-caret-down arrow"></i></button>
+                    <div class="dropdown-content">
+                        <a id="logged-out" class="cta" href="#">Sign Up</a>
+                        <a id="logged-out" class="cta2" href="#">Log In</a>
+                        <a id="profile" class="" href="#profile.html"><i
+                                class="fa-solid fa-user icon__account"></i>Profile</a>
+                        <a id="settings" class="" href="#settings.html"><i
+                                class="fa-solid fa-gear icon__account"></i>Settings</a>
+                        <a id="help" class="" href="#help.html"><i
+                                class="fa-solid fa-circle-question icon__account"></i>Help</a>
+                        <a id="logout" class="logged-in" href="#"><i
+                                class="fa-solid fa-right-from-bracket icon__account"></i>Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal modal-close">
+                <form action="" id="signup-form">
+                    <p class="close"><i class="fa-solid fa-xmark"></i></p>
+                    <h2 class="form__title">Sign Up</h2>
+
+                    <div class="form-container">
+                        <div class="form__group">
+                            <input type="email" name="" id="signup-email" class="form__input" placeholder=" " required>
+                            <label for="signup-email" class="form__label">Email:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" name="" id="signup-password" class="form__input" placeholder=" "
+                                required minlength="6">
+                            <label for="signup-password" class="form__label">Password</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <button class="form__submit" type="submit">Sign Up</button>
+                        <p class="form__paragraph">Already have an account? <a class="links_for_account" id="run_login" href="#">Log In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-container2">
+            <div class="modal2 modal-close2">
+                <form action="" id="login-form">
+                    <p class="close2"><i class="fa-solid fa-xmark"></i></p>
+                    <h2 class="form__title">Log In</h2>
+                    <!-- <p class="form__paragraph"></p> -->
+                    <div class="form-container">
+                        <div class="form__group">
+                            <input type="email" name="" id="login-email" class="form__input" placeholder=" " required>
+                            <label for="login-email" class="form__label">Email:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" name="" id="login-password" class="form__input" placeholder=" "
+                                required minlength="6">
+                            <label for="login-password" class="form__label">Password</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <button class="form__submit" type="submit">Log In</button>
+                        <!-- <p>Or</p> -->
+                        <button class="form__submit__google" type="button" id="googleLogin">Google</button>
+                        <p class="form__paragraph">Are you a new user? <a class="links_for_account" id="run_signup" href="#">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="https://pack-yak.intomanga.com/Content/img/OnMangaLogo.png" alt="">
+            </div>
+            <div class="search">
+                <input type="search" name="" id="inputSearch" placeholder="¿Que desea buscar?">
+                <div class="search-box">
+                    <ul class="list" id="resultado">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" name="" id="check__menu">
+                <label id="label__check" for="check__menu">
+                    <i class="fa-solid fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" id="selected">
+                                <i class="fa-solid fa-house"></i>
+                            </a>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="index.html">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+
+    </section>
+
+    <!-- <script src="./js/firebase.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/stickyMenu.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
