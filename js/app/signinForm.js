@@ -3,7 +3,9 @@ import { auth } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 
 const signInForm = document.querySelector('#login-form');
-let modificar = document.querySelector('#profile')
+
+let borrarEmail = document.querySelector("#login-email")
+let borrarPassword = document.querySelector("#login-password")
 
 signInForm?.addEventListener('submit', async e => {
     e.preventDefault();
@@ -16,7 +18,7 @@ signInForm?.addEventListener('submit', async e => {
     try {
 
         const credentials = await signInWithEmailAndPassword(auth, email, password)
-        console.log(credentials)
+        //console.log(credentials)
 
         document.querySelector("#signupModal2")
         modal2.classList.toggle("modal-close2");
@@ -25,6 +27,8 @@ signInForm?.addEventListener('submit', async e => {
 
 
         showMessage("Welcome " + credentials.user.email, 'success')
+        borrarEmail.value = ''
+        borrarPassword.value = ''
     } catch (error) {
         console.log(error)
         if (error.code === "auth/wrong-password") {

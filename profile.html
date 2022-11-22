@@ -1,18 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pagina</title>
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-        <script src="https://kit.fontawesome.com/81cc280855.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script src="./js/main.js" type="module"></script>
-        <link rel="stylesheet" href="./css/all.css">
-        <link rel="stylesheet" href="./css/index.css">
-    </head>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://kit.fontawesome.com/81cc280855.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
 <body>
-    
+    <header>
+        <div class="header__login">
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook logo_facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram logo_instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube logo_youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter logo_twitter"></i></a>
+            </div>
+            <div class="account">
+                <div class="dropdown">
+                    <button class="dropbtn "><i class="fa-solid fa-user user"></i>My Account<i
+                            class="fa-solid fa-caret-down arrow"></i></button>
+                    <div class="dropdown-content">
+                        <a id="logged-out" class="cta" href="#">Sign Up</a>
+                        <a id="logged-out" class="cta2" href="#">Log In</a>
+                        <a id="showProfile" href="#"></a>
+                        <!-- <a id="profile" class="" href="#profile.html"><i
+                            class="fa-solid fa-user icon__account"></i>Profile</a> -->
+                        <hr class="hr">
+                        <a id="settings" class="" href="#settings.html"><i
+                                class="fa-solid fa-gear icon__account"></i>Settings</a>
+                        <a id="help" class="" href="#help.html"><i
+                                class="fa-solid fa-circle-question icon__account"></i>Help</a>
+                        <a id="logout" class="logged-in" href="#"><i
+                                class="fa-solid fa-right-from-bracket icon__account"></i>Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal modal-close">
+                <form action="" id="signup-form">
+                    <p class="close"><i class="fa-solid fa-xmark"></i></p>
+                    <h2 class="form__title">Sign Up</h2>
+                    <div class="form-container">
+                        <div class="form__group">
+                            <input type="email" name="" id="signup-email" class="form__input" placeholder=" " required>
+                            <label for="signup-email" class="form__label">Email:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" name="" id="signup-password" class="form__input" placeholder=" "
+                                required minlength="6">
+
+                            <label for="signup-password" class="form__label">Password</label>
+                            <span class="form__line"></span>
+                            <span id="show">Show</span>
+                        </div>
+                        <button class="form__submit" type="submit">Sign Up</button>
+                        <p class="form__paragraph">Already have an account? <a class="links_for_account" id="run_login"
+                                href="#">Log In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-container2">
+            <div class="modal2 modal-close2">
+                <form action="" id="login-form">
+                    <p class="close2"><i class="fa-solid fa-xmark"></i></p>
+                    <h2 class="form__title">Log In</h2>
+                    <div class="form-container">
+                        <div class="form__group">
+                            <input type="email" name="" id="login-email" class="form__input" placeholder=" " required>
+                            <label for="login-email" class="form__label">Email:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" name="" id="login-password" class="form__input" placeholder=" "
+                                required minlength="6">
+                            <label for="login-password" class="form__label">Password</label>
+                            <span class="form__line"></span>
+                            <span id="show2">Show</span>
+                        </div>
+                        <a id="" class="cta3" href="#">Forgot password?</a>
+                        <button class="form__submit" type="submit">Log In</button>
+                        <!-- <p>Or</p> -->
+                        <button class="form__submit__google" type="button" id="googleLogin">Google</button>
+                        <p class="form__paragraph">Are you a new user? <a class="links_for_account" id="run_signup"
+                                href="#">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-container3">
+            <div class="modal3 modal-close3">
+                <form action="" id="reset-form">
+                    <p class="close3"><i class="fa-solid fa-xmark"></i></p>
+                    <h2 class="form__title">Email</h2>
+                    <div class="form-container">
+                        <div class="form__group">
+                            <input type="email" name="" id="reset-email" class="form__input" placeholder=" " required>
+                            <label for="reset-email" class="form__label">Email:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <button class="form__submit" id="resetPassword">Confirm</button>
+                        <a id="run_reset_password" class="have_password" href="#">I have a password</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="header__superior">
+            <div class="logo">
+                <div>
+                    <h2>Soy un logo :)</h2>
+                </div>
+                <!-- <img src="https://pack-yak.intomanga.com/Content/img/OnMangaLogo.png" alt=""> -->
+            </div>
+            <div class="search">
+                <input type="search" name="" id="inputSearch" placeholder="¿Que desea buscar?">
+                <div class="search-box">
+                    <ul class="list" id="resultado">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" name="" id="check__menu">
+                <label id="label__check" for="check__menu">
+                    <i class="fa-solid fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" id="selected">
+                                <i class="fa-solid fa-house"></i>
+                            </a>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Opcion</a>
+                            <ul>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                                <li><a href="#">Opcion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="section1">
+        <div class="section_container">
+            <h1 id="h1"><!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi tempore vitae voluptatum, reprehenderit
+                totam dolorum magnam unde debitis optio similique amet modi doloribus pariatur quasi dolores accusamus,
+                ipsum sit sapiente. Architecto quasi quidem ea voluptate porro nisi placeat tempore repellat aliquid
+                repudiandae alias iure, tenetur distinctio eos assumenda suscipit et veniam vero itaque amet. Atque nemo
+                beatae saepe cumque! Iusto delectus minima veritatis quae tempora vitae rerum incidunt, fuga architecto
+                dolores facere commodi beatae quas odio ab recusandae aperiam, quisquam et sed eius? Tenetur eaque
+                facere, eos fugiat cupiditate, exercitationem unde sequi consectetur, voluptatum ipsa et suscipit. Quis,
+                atque quo! Repellendus exercitationem nostrum reprehenderit et blanditiis enim dolores nulla aperiam
+                facilis, a, nihil, repudiandae architecto eaque unde. Itaque, tempore consequuntur fugit fuga nihil
+                expedita inventore consectetur laborum aperiam nam accusantium, sit nulla velit dolorem libero soluta
+                quis officia nesciunt quia, quos rerum ducimus natus aspernatur iure. Laboriosam dolores, nobis earum
+                rem laborum quos aspernatur, facere officia quas asperiores, voluptas maxime error natus suscipit!
+                Dolorem, fugit recusandae expedita molestiae ab reprehenderit cupiditate repellendus harum eligendi
+                libero corporis possimus ad. Earum facilis deleniti in aut commodi quisquam laboriosam ratione saepe
+                ipsum animi, vitae eum fugiat numquam accusamus, illum provident molestias natus quam dicta nemo libero
+                sed, odio nulla. Consequatur nostrum dicta soluta officia! Vel debitis atque accusantium, tenetur quis
+                eveniet officiis saepe illo eum in deserunt, ipsum dolor nemo quae voluptas sapiente nisi quaerat
+                eligendi omnis dolorum? Voluptates, totam esse velit iste expedita quos, quo commodi neque maxime facere
+                ab eum animi odit repellendus! Laudantium possimus eum maiores neque itaque praesentium libero nihil
+                consequatur facere provident. Culpa distinctio fugiat nesciunt eius ea debitis voluptatibus!
+                Perspiciatis dolores velit rem sint error quaerat cumque fugiat, dolorem placeat similique modi ipsum
+                recusandae animi at totam obcaecati. Cupiditate assumenda asperiores qui rem saepe voluptatem natus,
+                perferendis tempora quos, laborum exercitationem ad amet totam minima, tempore quibusdam earum cum
+                commodi temporibus aspernatur error delectus inventore deserunt sint. Facilis quam quae deleniti quis
+                perspiciatis doloribus sapiente omnis ducimus quaerat non cumque modi porro autem laborum ipsum
+                blanditiis incidunt sint laboriosam numquam, commodi recusandae illum ex ratione qui. Perspiciatis quia
+                ipsum molestias esse autem nihil culpa recusandae repellat officiis mollitia explicabo deserunt totam
+                expedita similique voluptatibus sit, quasi dolorem accusantium praesentium voluptate nobis est, iure
+                quis. Illo cumque, unde optio enim sunt soluta minima nesciunt officiis asperiores cupiditate, ad,
+                dolorum assumenda beatae? Alias autem, deleniti quo at libero nisi aspernatur culpa laborum laboriosam
+                veniam distinctio error ratione, officia tempora, ab labore sapiente officiis? Placeat id dolorum autem
+                eligendi, delectus sequi, assumenda dolores porro molestiae eaque eos ipsam quis enim ratione quidem
+                voluptates odit ipsa. Porro maxime tenetur dolores veniam odit, eaque placeat! Eaque voluptates
+                consequuntur enim temporibus a possimus cum id itaque aliquam voluptatem, rem odit eius exercitationem
+                dolor illo magnam natus asperiores! Praesentium, voluptatibus exercitationem omnis recusandae tempora
+                atque consectetur enim sint laudantium, dolorem, aperiam ipsa placeat fugit magni id tenetur distinctio
+                corrupti sed commodi blanditiis. Accusamus veritatis est consequatur quasi exercitationem ea. Libero
+                laborum nemo amet dolores? --></h1>
+                <h2 id="h2"></h2>
+                <h3 id="h3"></h3>
+                <h4 id="h4"></h4>
+                <h5 id="h5"></h5>
+        </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted"><a href="#">&copy; Pagina</a></span>
+        </div>
+    </footer>
+
+
+
+    <!-- <div id="disqus_thread"></div> -->
+
+    <!-- <script src="./js/comments.js"></script> -->
+    <!-- <script id="dsq-count-scr" src="//comentarios-hjnp3ocsoq.disqus.com/count.js" async></script> -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/stickyMenu.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/app/resetPassword.js"></script>
 </body>
+
 </html>
