@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import { auth } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 
@@ -10,12 +10,12 @@ googleButton?.addEventListener('click', async () => {
 
     try {
         const credentials = await signInWithPopup(auth, provider)
-        console.log(credentials)
+        /* console.log(credentials) */
 
         document.querySelector("#signupModal2")
-        modal2.classList.toggle("modal-close2");
-        modalC2.style.opacity = "0";
-        modalC2.style.visibility = "hidden";
+        modalLogIn.classList.toggle("modal-close2");
+        modalCLogIn.style.opacity = "0";
+        modalCLogIn.style.visibility = "hidden";
 
         showMessage("Welcome " + credentials.user.displayName, 'success')
 

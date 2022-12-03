@@ -12,6 +12,8 @@
     <script src="./js/main.js" type="module"></script>
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/components/modal.css">
 </head>
 
 <body>
@@ -25,12 +27,12 @@
             </div>
             <div class="account">
                 <div class="dropdown">
-                    <button class="dropbtn "><i class="fa-solid fa-user user"></i>My Account<i
+                    <button class="dropbtn"><i class="fa-solid fa-user user"></i>My Account<i
                             class="fa-solid fa-caret-down arrow"></i></button>
                     <div class="dropdown-content">
                         <a id="logged-out" class="cta" href="#">Sign Up</a>
                         <a id="logged-out" class="cta2" href="#">Log In</a>
-                        <a id="showProfile" href="#"></a>
+                        <a id="showProfile" href="profile.html"></a>
                         <!-- <a id="profile" class="" href="#profile.html"><i
                             class="fa-solid fa-user icon__account"></i>Profile</a> -->
                         <hr class="hr">
@@ -44,12 +46,17 @@
                 </div>
             </div>
         </div>
-        <div class="modal-container">
-            <div class="modal modal-close">
+        <div class="modal-container-SignUp">
+            <div class="modal-SignUp modal-close-SignUp">
                 <form action="" id="signup-form">
-                    <p class="close"><i class="fa-solid fa-xmark"></i></p>
+                    <p class="close-SignUp"><i class="fa-solid fa-xmark"></i></p>
                     <h2 class="form__title">Sign Up</h2>
                     <div class="form-container">
+                        <div class="form__group">
+                            <input type="text" name="" id="signup-name" class="form__input" placeholder=" " required maxlength="35">
+                            <label for="signup-name" class="form__label">Name:</label>
+                            <span class="form__line"></span>
+                        </div>
                         <div class="form__group">
                             <input type="email" name="" id="signup-email" class="form__input" placeholder=" " required>
                             <label for="signup-email" class="form__label">Email:</label>
@@ -58,10 +65,16 @@
                         <div class="form__group">
                             <input type="password" name="" id="signup-password" class="form__input" placeholder=" "
                                 required minlength="6">
-
                             <label for="signup-password" class="form__label">Password</label>
                             <span class="form__line"></span>
                             <span id="show">Show</span>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" name="" id="signup-password2" class="form__input" placeholder=" "
+                                required minlength="6">
+                            <label for="signup-password2" class="form__label">Repeat password</label>
+                            <span class="form__line"></span>
+                            <span id="show3">Show</span>
                         </div>
                         <button class="form__submit" type="submit">Sign Up</button>
                         <p class="form__paragraph">Already have an account? <a class="links_for_account" id="run_login"
@@ -70,10 +83,10 @@
                 </form>
             </div>
         </div>
-        <div class="modal-container2">
-            <div class="modal2 modal-close2">
+        <div class="modal-container-LogIn">
+            <div class="modal-LogIn modal-close-LogIn">
                 <form action="" id="login-form">
-                    <p class="close2"><i class="fa-solid fa-xmark"></i></p>
+                    <p class="close-LogIn"><i class="fa-solid fa-xmark"></i></p>
                     <h2 class="form__title">Log In</h2>
                     <div class="form-container">
                         <div class="form__group">
@@ -98,10 +111,10 @@
                 </form>
             </div>
         </div>
-        <div class="modal-container3">
-            <div class="modal3 modal-close3">
+        <div class="modal-container-ResetPassword">
+            <div class="modal-ResetPassword modal-close-ResetPassword">
                 <form action="" id="reset-form">
-                    <p class="close3"><i class="fa-solid fa-xmark"></i></p>
+                    <p class="close-ResetPassword"><i class="fa-solid fa-xmark"></i></p>
                     <h2 class="form__title">Email</h2>
                     <div class="form-container">
                         <div class="form__group">
@@ -115,13 +128,27 @@
                 </form>
             </div>
         </div>
+        <div class="modal-container-ResetPasswordConfirm">
+            <div class="modal-ResetPasswordConfirm modal-close-ResetPasswordConfirm">
+                <form action="" id="reset-form2">
+                    <p class="close-ResetPasswordConfirm"><i class="fa-solid fa-xmark"></i></p>
+                    <h2 class="form__title">Email sent successfully!</h2>
+                    <div class="form-container">
+                        <div class="form__group">
+                            <p>If the email is not in the inbox, look at spam</p>
+                        </div>
+                        <button class="form__submit" id="resetConfirm">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <hr>
-        <div class="header__superior">
+        <!-- <div class="header__superior">
             <div class="logo">
                 <div>
                     <h2>Soy un logo :)</h2>
                 </div>
-                <!-- <img src="https://pack-yak.intomanga.com/Content/img/OnMangaLogo.png" alt=""> -->
+                
             </div>
             <div class="search">
                 <input type="search" name="" id="inputSearch" placeholder="¿Que desea buscar?">
@@ -131,7 +158,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="container__menu">
             <div class="menu">
                 <input type="checkbox" name="" id="check__menu">
@@ -145,9 +172,9 @@
                                 <i class="fa-solid fa-house"></i>
                             </a>
                         </li>
-                        <li><a href="#">Opcion</a>
+                        <li><a href="#">Poems</a>
                             <ul>
-                                <li><a href="#">Opcion</a></li>
+                                <li><a href="poemas.html">Poems</a></li>
                                 <li><a href="#">Opcion</a></li>
                                 <li><a href="#">Opcion</a></li>
                                 <li><a href="#">Opcion</a></li>
@@ -195,55 +222,117 @@
             </div>
         </div>
     </header>
-
-    <section class="section1">
-        <div class="section_container">
-            <h1 id="h1"><!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi tempore vitae voluptatum, reprehenderit
-                totam dolorum magnam unde debitis optio similique amet modi doloribus pariatur quasi dolores accusamus,
-                ipsum sit sapiente. Architecto quasi quidem ea voluptate porro nisi placeat tempore repellat aliquid
-                repudiandae alias iure, tenetur distinctio eos assumenda suscipit et veniam vero itaque amet. Atque nemo
-                beatae saepe cumque! Iusto delectus minima veritatis quae tempora vitae rerum incidunt, fuga architecto
-                dolores facere commodi beatae quas odio ab recusandae aperiam, quisquam et sed eius? Tenetur eaque
-                facere, eos fugiat cupiditate, exercitationem unde sequi consectetur, voluptatum ipsa et suscipit. Quis,
-                atque quo! Repellendus exercitationem nostrum reprehenderit et blanditiis enim dolores nulla aperiam
-                facilis, a, nihil, repudiandae architecto eaque unde. Itaque, tempore consequuntur fugit fuga nihil
-                expedita inventore consectetur laborum aperiam nam accusantium, sit nulla velit dolorem libero soluta
-                quis officia nesciunt quia, quos rerum ducimus natus aspernatur iure. Laboriosam dolores, nobis earum
-                rem laborum quos aspernatur, facere officia quas asperiores, voluptas maxime error natus suscipit!
-                Dolorem, fugit recusandae expedita molestiae ab reprehenderit cupiditate repellendus harum eligendi
-                libero corporis possimus ad. Earum facilis deleniti in aut commodi quisquam laboriosam ratione saepe
-                ipsum animi, vitae eum fugiat numquam accusamus, illum provident molestias natus quam dicta nemo libero
-                sed, odio nulla. Consequatur nostrum dicta soluta officia! Vel debitis atque accusantium, tenetur quis
-                eveniet officiis saepe illo eum in deserunt, ipsum dolor nemo quae voluptas sapiente nisi quaerat
-                eligendi omnis dolorum? Voluptates, totam esse velit iste expedita quos, quo commodi neque maxime facere
-                ab eum animi odit repellendus! Laudantium possimus eum maiores neque itaque praesentium libero nihil
-                consequatur facere provident. Culpa distinctio fugiat nesciunt eius ea debitis voluptatibus!
-                Perspiciatis dolores velit rem sint error quaerat cumque fugiat, dolorem placeat similique modi ipsum
-                recusandae animi at totam obcaecati. Cupiditate assumenda asperiores qui rem saepe voluptatem natus,
-                perferendis tempora quos, laborum exercitationem ad amet totam minima, tempore quibusdam earum cum
-                commodi temporibus aspernatur error delectus inventore deserunt sint. Facilis quam quae deleniti quis
-                perspiciatis doloribus sapiente omnis ducimus quaerat non cumque modi porro autem laborum ipsum
-                blanditiis incidunt sint laboriosam numquam, commodi recusandae illum ex ratione qui. Perspiciatis quia
-                ipsum molestias esse autem nihil culpa recusandae repellat officiis mollitia explicabo deserunt totam
-                expedita similique voluptatibus sit, quasi dolorem accusantium praesentium voluptate nobis est, iure
-                quis. Illo cumque, unde optio enim sunt soluta minima nesciunt officiis asperiores cupiditate, ad,
-                dolorum assumenda beatae? Alias autem, deleniti quo at libero nisi aspernatur culpa laborum laboriosam
-                veniam distinctio error ratione, officia tempora, ab labore sapiente officiis? Placeat id dolorum autem
-                eligendi, delectus sequi, assumenda dolores porro molestiae eaque eos ipsam quis enim ratione quidem
-                voluptates odit ipsa. Porro maxime tenetur dolores veniam odit, eaque placeat! Eaque voluptates
-                consequuntur enim temporibus a possimus cum id itaque aliquam voluptatem, rem odit eius exercitationem
-                dolor illo magnam natus asperiores! Praesentium, voluptatibus exercitationem omnis recusandae tempora
-                atque consectetur enim sint laudantium, dolorem, aperiam ipsa placeat fugit magni id tenetur distinctio
-                corrupti sed commodi blanditiis. Accusamus veritatis est consequatur quasi exercitationem ea. Libero
-                laborum nemo amet dolores? --></h1>
-                <h2 id="h2"></h2>
-                <h3 id="h3"></h3>
-                <h4 id="h4"></h4>
-                <h5 id="h5"></h5>
+    <div class="modal-container-ChangeName">
+        <div class="modal-ChangeName modal-close-ChangeName">
+            <form action="" id="name-form">
+                <p class="close-ChangeName"><i class="fa-solid fa-xmark"></i></p>
+                <h2 class="form__title">New name</h2>
+                <div class="form-container">
+                    <div class="form__group">
+                        <input type="text" name="" id="updateNameInput" class="form__input" placeholder=" " required maxlength="35">
+                        <label for="updateNameInput" class="form__label">Name:</label>
+                        <span class="form__line"></span>
+                    </div>
+                    <button class="form__submit" id="changeNameButton">Confirm</button>
+                </div>
+            </form>
         </div>
+    </div>
+    <div class="modal-container-ChangeImg">
+        <div class="modal-ChangeImg modal-close-ChangeImg">
+            <form action="" id="img-form">
+                <p class="close-ChangeImg"><i class="fa-solid fa-xmark"></i></p>
+                <h2 class="form__title">New image profile</h2>
+                <div class="form-container">
+                    <div class="form__group">
+                        <p>Only accept URLs that end in .jpg or .png</p>
+                    </div>
+                    <div class="form__group">
+                        <input type="url" name="" id="updateImgInput" class="form__input" placeholder=" " required>
+                        <label for="updateImgInput" class="form__label">Image url:</label>
+                        <span class="form__line"></span>
+                    </div>
+                    <button class="form__submit" id="changeImgButton">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <section class="section1">
+        <div class="account-settings">
+            <div class="myProfile2">
+                <h2 class="">My profile</h2>
+            </div>
+            <div class="profile-details">
+                <div class="profesional-details">
+                    <div class="displayName">
+                        <h1 id="topImgName"></h1>
+                    </div>
+                    <div class="img-container cta6" id="changeImgButton">
+                        <i class="fa-solid fa-pen pen"></i>
+                    </div>
+                </div>
+                <div class="information2">
+                    <div class="lalala">
+                        <div class="myProfile">
+                            <h2 class="">About me</h2>
+                        </div>
+                    </div>
+                    <div class="lala">
+                        <div class="con">
+                            <h4>Name: </h4>
+                            <h4 class="h4" id="data_name"></h4>
+                            <button class="cta5" id="">Change</button>
+                        </div>
+                        <div class="con">
+                            <h4>Email: </h4>
+                            <h4 class="h4" id="data_email"></h4>
+                            <button class="" id="">Change</button>
+                        </div>
+                        <div class="con">
+                            <h4>Password: </h4>
+                            <h4 class="h4" id="data_password"></h4>
+                            <button>Change</button>
+                        </div>
+                        <div class="con">
+                            <h4>Age: </h4>
+                            <h4 class="h4" id="data_age"></h4>
+                            <button>Change</button>
+                        </div>
+                        <div class="con">
+                            <h4>Favorites Authors: </h4>
+                            <h4 class="h4" id="data_favoritesAuthors"></h4>
+                            <button>Change</button>
+                        </div>
+                        <div class="con">
+                            <h4>Country: </h4>
+                            <h4 class="h4" id="data_country"></h4>
+                            <button>Change</button>
+                        </div>
+                        <div class="con">
+                            <h4>City: </h4>
+                            <h4 class="h4" id="data_city"></h4>
+                            <button>Change</button>
+                        </div>
+                        <div class="con">
+                            <h4>Phone Number: </h4>
+                            <h4 class="h4" id="data_phoneNumber"></h4>
+                            <button class="cta6" id="">Change</button>
+                        </div>
+                        <div class="con">
+                            <h4>Creation Time: </h4>
+                            <h4 class="h4" id="data_creationTime"></h4>
+                            <!-- <button>Change</button> -->
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+            <div class="description-profile">
+                <!-- <h1>aaa</h1> -->
+            </div>
+            <button id="borrar">Borrar</button>
+        </div>
     </section>
-
 
 
     <footer class="footer">
@@ -264,9 +353,12 @@
     <script src="./js/stickyMenu.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/app/resetPassword.js"></script>
+    <script type="module" src="./js/app/resetPassword.js"></script>
+    <script type="module" src="./js/app/updateUser.js"></script>
+
+</body>
 </body>
 
 </html>

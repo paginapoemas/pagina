@@ -1,0 +1,121 @@
+/* ::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(201, 201, 201);
+    border-radius: 0px 10px 10px 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(145, 145, 145);
+    border-radius: 0px 10px 10px 0px;
+} */
+
+.savePoem {
+    text-align: center;
+}
+
+.sectionPoems {
+    *background-color: aqua;
+    margin-bottom: 250px;
+}
+
+.poemsDiv {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: auto;
+    padding: 10px;
+    *background-color: rgb(248, 122, 122);
+}
+
+
+.poems {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 200px;
+    background-color: aliceblue;
+    margin: 8px;
+    text-overflow: ellipsis;
+    /* overflow-y: scroll; */
+    overflow: hidden;
+    padding: 25px;
+}
+
+#borrarPoema {
+    color: rgb(255, 0, 0);
+}
+
+.basura {
+    color: red;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.basura2 {
+    color: rgb(17, 0, 255);
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    
+}
+
+.basura3 {
+    font-size: 14px;
+    position: absolute;
+    color: rgb(185, 184, 184);
+    top: 8px;
+    right: 130px;
+    *bottom: 5px;
+}
+
+.basura4 {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+.titlePoem{
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+}
+
+.as {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    
+}
+
+.new {
+    cursor: pointer;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 50%;
+    bottom: 90px;
+    position: fixed;
+    right: 40px;
+}
+
+.newPoem {
+    font-size: 30px;
+}
+
+.div {
+    position: relative;
+    margin-top: 240px;
+}
+
+.datePublic {
+    position: absolute;
+    color: rgb(185, 184, 184);
+    bottom: 8px;
+    right: 8px;
+}

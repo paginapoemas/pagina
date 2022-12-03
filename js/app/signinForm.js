@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import { auth } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 
@@ -18,17 +18,18 @@ signInForm?.addEventListener('submit', async e => {
     try {
 
         const credentials = await signInWithEmailAndPassword(auth, email, password)
-        //console.log(credentials)
+        console.log(credentials)
 
         document.querySelector("#signupModal2")
-        modal2.classList.toggle("modal-close2");
-        modalC2.style.opacity = "0";
-        modalC2.style.visibility = "hidden";
+        modalLogIn.classList.toggle("modal-close2");
+        modalCLogIn.style.opacity = "0";
+        modalCLogIn.style.visibility = "hidden";
 
 
         showMessage("Welcome " + credentials.user.email, 'success')
         borrarEmail.value = ''
         borrarPassword.value = ''
+        window.location.reload()
     } catch (error) {
         console.log(error)
         if (error.code === "auth/wrong-password") {
@@ -37,6 +38,8 @@ signInForm?.addEventListener('submit', async e => {
             showMessage("User not found or invalid email", "error")
         } else if (error.code == "auth/too-many-requests") {
             showMessage("too many tries, please try again later", "error")
+        } else if (error.code == "auth/user-disabled") {
+            showMessage("account disabled", "error")
         } else {
             showMessage(error.message, 'error')
         }

@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Pagina</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://kit.fontawesome.com/81cc280855.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="./js/main.js" type="module"></script>
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/poems.css">
     <link rel="stylesheet" href="./css/components/modal.css">
-    <link rel="stylesheet" href="./css/profile.css">
 </head>
 
 <body>
@@ -33,9 +33,6 @@
                     <div class="dropdown-content">
                         <a id="logged-out" class="cta" href="#">Sign Up</a>
                         <a id="logged-out" class="cta2" href="#">Log In</a>
-                        <div class="showProfileTop">
-
-                        </div>
                         <a id="showProfile" href="profile.html"></a>
                         <!-- <a id="profile" class="" href="#profile.html"><i
                             class="fa-solid fa-user icon__account"></i>Profile</a> -->
@@ -57,8 +54,7 @@
                     <h2 class="form__title">Sign Up</h2>
                     <div class="form-container">
                         <div class="form__group">
-                            <input type="text" name="" id="signup-name" class="form__input" placeholder=" " required
-                                maxlength="35">
+                            <input type="text" name="" id="signup-name" class="form__input" placeholder=" " required maxlength="35">
                             <label for="signup-name" class="form__label">Name:</label>
                             <span class="form__line"></span>
                         </div>
@@ -147,13 +143,36 @@
                 </form>
             </div>
         </div>
+        <div class="modal-container-NewPoem">
+            <div class="modal-NewPoem modal-close-NewPoem">
+                <form action="" id="createPoem-form">
+                    <p class="close-NewPoem"><i class="fa-solid fa-xmark"></i></p>
+                    <h2 class="form__title" id="text-Title">New Poem</h2>
+                    <div class="form-container">
+                        <div class="form__group">
+                            <input type="Text" name="" id="titlePoem" class="form__input" placeholder=" ">
+                            <label for="titlePoem" class="form__label">Poem Title:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <textarea name="" id="contenPoem" cols="30" rows="10" placeholder="Conten"></textarea>
+                            <!-- <input type="Text" name="" id="titlePoem" class="form__input" placeholder=" " required> -->
+                            <!-- <label for="titlePoem" class="form__label">Poem Conten:</label> -->
+                            <span class="form__line"></span>
+                        </div>
+                        <button  class="form__submit" type="submit" id="savePoem">Save</button>
+                        <!-- <button class="form__submit" id="resetConfirm">Confirm</button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
         <hr>
-        <div class="header__superior">
+        <!-- <div class="header__superior">
             <div class="logo">
                 <div>
                     <h2>Soy un logo :)</h2>
                 </div>
-                <!-- <img src="https://pack-yak.intomanga.com/Content/img/OnMangaLogo.png" alt=""> -->
+                
             </div>
             <div class="search">
                 <input type="search" name="" id="inputSearch" placeholder="¿Que desea buscar?">
@@ -163,7 +182,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="container__menu">
             <div class="menu">
                 <input type="checkbox" name="" id="check__menu">
@@ -229,32 +248,29 @@
     </header>
 
     <section class="section1">
-        <!-- <div class="section_container">
-            <h1 id="h1">
-                
-            </h1>
-            <h2 id="h2"></h2>
-            <h3 id="h3"></h3>
-            <h4 id="h4"></h4>
-            <h5 style="margin-top: 500px;" id="h5"></h5>
-        </div> -->
+        <!-- <form class="savePoem" action="" id="createPoem-form">
+            <input type="text" name="" id="titlePoem" placeholder="Title">
+            <textarea name="" id="contenPoem" cols="30" rows="10" placeholder="Conten"></textarea>
+            
+            <button type="submit" id="savePoem">Save</button>
+        
+        </form>
+
+        <h2 id="h234"></h2>
+        <h2 id="h235"></h2> -->
     </section>
+
     <section class="sectionPoems" id="sectionPoems">
-        <div class="div">
-            <div class="poemsDiv poemsHome" id="">
+        <div class="poemsDiv poemsUser" id="">
 
 
-
-            </div>
         </div>
+
     </section>
-    <!-- <section class="sectionPoems" id="sectionPoems">
-        
-        
-    </section> -->
 
-
-
+    <div class="new cta7">
+        <i class="fa-solid fa-plus newPoem"></i>
+    </div>
     <footer class="footer">
         <div class="container">
             <span class="text-muted"><a href="#">&copy; Pagina</a></span>
@@ -276,6 +292,9 @@
     <script type="module" src="./js/main.js"></script>
     <script src="./js/script.js"></script>
     <script type="module" src="./js/app/resetPassword.js"></script>
+    <script type="module" src="./js/app/updateUser.js"></script>
+
+</body>
 </body>
 
 </html>

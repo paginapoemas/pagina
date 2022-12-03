@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="displayHours"></p>
+    <p id="displayMinutes"></p>
+    <p id="displaySeconds"></p>
+
+    <script>
+
+        var displayHours = document.getElementById('displayHours');
+        var displayMinutes = document.getElementById('displayMinutes');
+        var displaySeconds = document.getElementById('displaySeconds');
+
+        var currentTime = new Date();
+
+        var hora = currentTime.getHours() + " hrs";
+        var minutos = currentTime.getMinutes() + " min";
+        var segundos = currentTime.getSeconds() + " sec";
+
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth() + 1;
+        var year = today.getFullYear();
+
+        console.log(`${hora} ${minutos} ${segundos} - ${month}/${day}/${year}`)
+
+
+        /* console.log(hora, minutos, segundos) */
+
+
+        displayHours.innerHTML = currentTime.getHours() + " hrs";
+        displayMinutes.innerHTML = currentTime.getMinutes() + " min";
+        displaySeconds.innerHTML = currentTime.getSeconds() + " sec";
+
+    </script>
+</body>
+
+</html>

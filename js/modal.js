@@ -8,89 +8,175 @@ let cambiarLogIn = document.querySelector("#run_login")
 let cambiarSignUp = document.querySelector("#run_signup")
 let cambiarResetPassword = document.querySelector("#run_reset_password")
 
-let cerrar = document.querySelectorAll(".close")[0];
-let abrir = document.querySelectorAll(".cta")[0];
-let modal = document.querySelectorAll(".modal")[0];
-let modalC = document.querySelectorAll(".modal-container")[0];
+/* SignUp */
+let cerrarSignUp = document.querySelectorAll(".close-SignUp")[0];
+let abrirSignUp = document.querySelectorAll(".cta")[0];
+let modalSignUp = document.querySelectorAll(".modal-SignUp")[0];
+let modalCSignUp = document.querySelectorAll(".modal-container-SignUp")[0];
+/* ----------------------------------------------------- */
 
-let cerrar2 = document.querySelectorAll(".close2")[0];
-let abrir2 = document.querySelectorAll(".cta2")[0];
-let modal2 = document.querySelectorAll(".modal2")[0];
-let modalC2 = document.querySelectorAll(".modal-container2")[0];
+/* LogIn */
+let cerrarLogIn = document.querySelectorAll(".close-LogIn")[0];
+let abrirLogIn = document.querySelectorAll(".cta2")[0];
+let modalLogIn = document.querySelectorAll(".modal-LogIn")[0];
+let modalCLogIn = document.querySelectorAll(".modal-container-LogIn")[0];
+/* ----------------------------------------------------- */
 
-let cerrar3 = document.querySelectorAll(".close3")[0];
-let abrir3 = document.querySelectorAll(".cta3")[0];
-let modal3 = document.querySelectorAll(".modal3")[0];
-let modalC3 = document.querySelectorAll(".modal-container3")[0];
+/* ResetPassword */
+let cerrarResetPassword = document.querySelectorAll(".close-ResetPassword")[0];
+let abrirResetPassword = document.querySelectorAll(".cta3")[0];
+let modalResetPassword = document.querySelectorAll(".modal-ResetPassword")[0];
+let modalCResetPassword = document.querySelectorAll(".modal-container-ResetPassword")[0];
+/* ----------------------------------------------------- */
+
+/* ResetPasswordConfirm */
+let cerrarResetPasswordConfirm = document.querySelectorAll(".close-ResetPasswordConfirm")[0];
+let abrirResetPasswordConfirm = document.querySelectorAll(".cta4")[0];
+let modalResetPasswordConfirm = document.querySelectorAll(".modal-ResetPasswordConfirm")[0];
+let modalCResetPasswordConfirm = document.querySelectorAll(".modal-container-ResetPasswordConfirm")[0];
+/* ----------------------------------------------------- */
+
+/* ChangeName */
+let cerrarChangeName = document.querySelectorAll(".close-ChangeName")[0];
+let abrirChangeName = document.querySelectorAll(".cta5")[0];
+let modalChangeName = document.querySelectorAll(".modal-ChangeName")[0];
+let modalCChangeName = document.querySelectorAll(".modal-container-ChangeName")[0];
+/* ----------------------------------------------------- */
+
+/* ChangeImg */
+let cerrarChangeImg = document.querySelectorAll(".close-ChangeImg")[0];
+let abrirChangeImg = document.querySelectorAll(".cta6")[0];
+let modalChangeImg = document.querySelectorAll(".modal-ChangeImg")[0];
+let modalCChangeImg = document.querySelectorAll(".modal-container-ChangeImg")[0];
+/* ----------------------------------------------------- */
+
+/* NewPoem */
+let cerrarNewPoem = document.querySelectorAll(".close-NewPoem")[0];
+let abrirNewPoem = document.querySelectorAll(".cta7")[0];
+let modalNewPoem = document.querySelectorAll(".modal-NewPoem")[0];
+let modalCNewPoem = document.querySelectorAll(".modal-container-NewPoem")[0];
 
 
+/* Cambiar LogIn */
 cambiarLogIn?.addEventListener("click", function (e) {
     e.preventDefault()
-    modal.classList.toggle("modal-close");
+    modalSignUp.classList.toggle("modal-close-SignUp");
     setTimeout(function () {
-        modalC.style.opacity = "0";
-        modalC.style.visibility = "hidden";
+        modalCSignUp.style.opacity = "0";
+        modalCSignUp.style.visibility = "hidden";
     }, 500);
-    modalC2.style.opacity = "1";
-    modalC2.style.visibility = "visible";
-    modal2.classList.toggle("modal-close2");
+    modalCLogIn.style.opacity = "1";
+    modalCLogIn.style.visibility = "visible";
+    modalLogIn.classList.toggle("modal-close-LogIn");
     borrarEmail.value = ''
     borrarPassword.value = ''
     borrarEmail3.value = ''
 });
+/* ----------------------------------------------------- */
 
+/* Cambiar SignUp */
 cambiarSignUp?.addEventListener("click", function (e) {
     e.preventDefault()
-    modal2.classList.toggle("modal-close2");
+    modalLogIn.classList.toggle("modal-close-LogIn");
     setTimeout(function () {
-        modalC2.style.opacity = "0";
-        modalC2.style.visibility = "hidden";
+        modalCLogIn.style.opacity = "0";
+        modalCLogIn.style.visibility = "hidden";
     }, 500);
-    modalC.style.opacity = "1";
-    modalC.style.visibility = "visible";
-    modal.classList.toggle("modal-close");
+    modalCSignUp.style.opacity = "1";
+    modalCSignUp.style.visibility = "visible";
+    modalSignUp.classList.toggle("modal-close-SignUp");
     borrarEmail2.value = ''
     borrarPassword2.value = ''
     borrarEmail.value = ''
     borrarPassword.value = ''
     borrarEmail3.value = ''
 });
+/* ----------------------------------------------------- */
 
+/* Cambiar ResetPassword */
 cambiarResetPassword?.addEventListener("click", function (e) {
     e.preventDefault()
-    modal3.classList.toggle("modal-close3");
+    modalResetPassword.classList.toggle("modal-close-ResetPassword");
     setTimeout(function () {
-        modalC3.style.opacity = "0";
-        modalC3.style.visibility = "hidden";
+        modalCResetPassword.style.opacity = "0";
+        modalCResetPassword.style.visibility = "hidden";
     }, 500);
-    modalC2.style.opacity = "1";
-    modalC2.style.visibility = "visible";
-    modal2.classList.toggle("modal-close2");
+    modalCLogIn.style.opacity = "1";
+    modalCLogIn.style.visibility = "visible";
+    modalLogIn.classList.toggle("modal-close-LogIn");
     borrarEmail3.value = ''
 })
+/* ----------------------------------------------------- */
 
+/* ResetPassword */
 let cerrarPassword = document.querySelector("#resetPassword")?.addEventListener("click", function (e) { 
     e.preventDefault() 
-    modal3.classList.toggle("modal-close3");
+    modalResetPassword.classList.toggle("modal-close-ResetPassword");
     setTimeout(function () {
-        modalC3.style.opacity = "0";
-        modalC3.style.visibility = "hidden";
+        modalCResetPassword.style.opacity = "0";
+        modalCResetPassword.style.visibility = "hidden";
     }, 500);
 
 })
 
-abrir.addEventListener("click", function (e) {
+abrirResetPassword.addEventListener("click", function (e) {
     e.preventDefault();
-    modalC.style.opacity = "1";
-    modalC.style.visibility = "visible";
-    modal.classList.toggle("modal-close");
+    modalLogIn.classList.toggle("modal-close-LogIn");
+    setTimeout(function () {
+        modalCLogIn.style.opacity = "0";
+        modalCLogIn.style.visibility = "hidden";
+    }, 500);
+    borrarEmail2.value = ''
+    borrarPassword2.value = ''
+    borrarEmail.value = ''
+    borrarPassword.value = ''
+    modalCResetPassword.style.opacity = "1";
+    modalCResetPassword.style.visibility = "visible";
+    modalResetPassword.classList.toggle("modal-close-ResetPassword");
 });
 
-cerrar.addEventListener("click", function (e) {
-    modal.classList.toggle("modal-close");
+cerrarResetPassword.addEventListener("click", function (e) {
+    modalResetPassword.classList.toggle("modal-close3");
     setTimeout(function () {
-        modalC.style.opacity = "0";
-        modalC.style.visibility = "hidden";
+        modalCResetPassword.style.opacity = "0";
+        modalCResetPassword.style.visibility = "hidden";
+    }, 500);
+    borrarEmail.value = ''
+    borrarPassword.value = ''
+    borrarEmail.value = ''
+    borrarPassword.value = ''
+});
+
+window.addEventListener("click", function (e) {
+    /* this.console.log(e.target) */
+    if (e.target == modalCResetPassword) {
+        modalResetPassword.classList.toggle("modal-close-ResetPassword");
+        setTimeout(function () {
+            modalCResetPassword.style.opacity = "0";
+            modalCResetPassword.style.visibility = "hidden";
+        }, 500);
+        borrarEmail.value = ''
+        borrarPassword.value = ''
+        borrarEmail2.value = ''
+        borrarPassword2.value = ''
+        borrarEmail3.value = ''
+    }
+})
+/* ----------------------------------------------------------------------- */
+
+/* Modal SignUp */
+abrirSignUp.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalCSignUp.style.opacity = "1";
+    modalCSignUp.style.visibility = "visible";
+    modalSignUp.classList.toggle("modal-close-SignUp");
+});
+
+cerrarSignUp.addEventListener("click", function (e) {
+    modalSignUp.classList.toggle("modal-close-SignUp");
+    setTimeout(function () {
+        modalCSignUp.style.opacity = "0";
+        modalCSignUp.style.visibility = "hidden";
     }, 500);
     borrarEmail2.value = ''
     borrarPassword2.value = ''
@@ -101,11 +187,11 @@ cerrar.addEventListener("click", function (e) {
 
 window.addEventListener("click", function (e) {
     /* this.console.log(e.target) */
-    if (e.target == modalC) {
-        modal.classList.toggle("modal-close");
+    if (e.target == modalCSignUp) {
+        modalSignUp.classList.toggle("modal-close-SignUp");
         setTimeout(function () {
-            modalC.style.opacity = "0";
-            modalC.style.visibility = "hidden";
+            modalCSignUp.style.opacity = "0";
+            modalCSignUp.style.visibility = "hidden";
         }, 500);
         borrarEmail2.value = ''
         borrarPassword2.value = ''
@@ -114,20 +200,21 @@ window.addEventListener("click", function (e) {
         borrarEmail3.value = ''
     }
 })
+/* ----------------------------------------------------------------------- */
 
-
-abrir2.addEventListener("click", function (e) {
+/* Modal LogIn */
+abrirLogIn.addEventListener("click", function (e) {
     e.preventDefault();
-    modalC2.style.opacity = "1";
-    modalC2.style.visibility = "visible";
-    modal2.classList.toggle("modal-close2");
+    modalCLogIn.style.opacity = "1";
+    modalCLogIn.style.visibility = "visible";
+    modalLogIn.classList.toggle("modal-close-LogIn");
 });
 
-cerrar2.addEventListener("click", function (e) {
-    modal2.classList.toggle("modal-close2");
+cerrarLogIn.addEventListener("click", function (e) {
+    modalLogIn.classList.toggle("modal-close-LogIn");
     setTimeout(function () {
-        modalC2.style.opacity = "0";
-        modalC2.style.visibility = "hidden";
+        modalCLogIn.style.opacity = "0";
+        modalCLogIn.style.visibility = "hidden";
     }, 500);
     borrarEmail.value = ''
     borrarPassword.value = ''
@@ -138,11 +225,11 @@ cerrar2.addEventListener("click", function (e) {
 
 window.addEventListener("click", function (e) {
     /* this.console.log(e.target) */
-    if (e.target == modalC2) {
-        modal2.classList.toggle("modal-close2");
+    if (e.target == modalCLogIn) {
+        modalLogIn.classList.toggle("modal-close-LogIn");
         setTimeout(function () {
-            modalC2.style.opacity = "0";
-            modalC2.style.visibility = "hidden";
+            modalCLogIn.style.opacity = "0";
+            modalCLogIn.style.visibility = "hidden";
         }, 500);
         borrarEmail.value = ''
         borrarPassword.value = ''
@@ -151,48 +238,109 @@ window.addEventListener("click", function (e) {
         borrarEmail3.value = ''
     }
 })
+/* ----------------------------------------------------------------------- */
 
-abrir3.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.preventDefault()
-    modal2.classList.toggle("modal-close2");
+/* Modal ResetPasswordConfirm */
+cerrarResetPasswordConfirm?.addEventListener("click", function (e) {
+    modalResetPasswordConfirm.classList.toggle("modal-close4");
     setTimeout(function () {
-        modalC2.style.opacity = "0";
-        modalC2.style.visibility = "hidden";
+        modalCResetPasswordConfirm.style.opacity = "0";
+        modalCResetPasswordConfirm.style.visibility = "hidden";
     }, 500);
-    borrarEmail2.value = ''
-    borrarPassword2.value = ''
-    borrarEmail.value = ''
-    borrarPassword.value = ''
-    modalC3.style.opacity = "1";
-    modalC3.style.visibility = "visible";
-    modal3.classList.toggle("modal-close3");
-});
-
-cerrar3.addEventListener("click", function (e) {
-    modal3.classList.toggle("modal-close3");
-    setTimeout(function () {
-        modalC3.style.opacity = "0";
-        modalC3.style.visibility = "hidden";
-    }, 500);
-    borrarEmail.value = ''
-    borrarPassword.value = ''
-    borrarEmail.value = ''
-    borrarPassword.value = ''
 });
 
 window.addEventListener("click", function (e) {
     /* this.console.log(e.target) */
-    if (e.target == modalC3) {
-        modal3.classList.toggle("modal-close3");
+    if (e.target == modalCResetPasswordConfirm) {
+        modalResetPassword.classList.toggle("modal-close4");
         setTimeout(function () {
-            modalC3.style.opacity = "0";
-            modalC3.style.visibility = "hidden";
+            modalCResetPassword.style.opacity = "0";
+            modalCResetPassword.style.visibility = "hidden";
         }, 500);
-        borrarEmail.value = ''
-        borrarPassword.value = ''
-        borrarEmail2.value = ''
-        borrarPassword2.value = ''
-        borrarEmail3.value = ''
     }
 })
+/* ----------------------------------------------------- */
+
+/* Modal ChangeName */
+abrirChangeName?.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalCChangeName.style.opacity = "1";
+    modalCChangeName.style.visibility = "visible";
+    modalChangeName.classList.toggle("modal-close-ChangeName");
+});
+
+cerrarChangeName?.addEventListener("click", function (e) {
+    modalChangeName.classList.toggle("modal-close-ChangeName");
+    setTimeout(function () {
+        modalCChangeName.style.opacity = "0";
+        modalCChangeName.style.visibility = "hidden";
+    }, 500);
+});
+
+window.addEventListener("click", function (e) {
+    /* this.console.log(e.target) */
+    if (e.target == modalCChangeName) {
+        modalChangeName.classList.toggle("modal-close-ChangeName");
+        setTimeout(function () {
+            modalCChangeName.style.opacity = "0";
+            modalCChangeName.style.visibility = "hidden";
+        }, 500);
+    }
+})
+/* ----------------------------------------------------- */
+
+/*  */
+abrirChangeImg?.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalCChangeImg.style.opacity = "1";
+    modalCChangeImg.style.visibility = "visible";
+    modalChangeImg.classList.toggle("modal-close-ChangeImg");
+});
+
+cerrarChangeImg?.addEventListener("click", function (e) {
+    modalChangeImg.classList.toggle("modal-close-ChangeImg");
+    setTimeout(function () {
+        modalCChangeImg.style.opacity = "0";
+        modalCChangeImg.style.visibility = "hidden";
+    }, 500);
+});
+
+window.addEventListener("click", function (e) {
+    /* this.console.log(e.target) */
+    if (e.target == modalCChangeImg) {
+        modalChangeImg.classList.toggle("modal-close-ChangeImg");
+        setTimeout(function () {
+            modalCChangeImg.style.opacity = "0";
+            modalCChangeImg.style.visibility = "hidden";
+        }, 500);
+    }
+})
+
+
+
+abrirNewPoem?.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalCNewPoem.style.opacity = "1";
+    modalCNewPoem.style.visibility = "visible";
+    modalNewPoem.classList.toggle("modal-close-NewPoem");
+});
+
+cerrarNewPoem?.addEventListener("click", function (e) {
+    modalNewPoem.classList.toggle("modal-close-NewPoem");
+    setTimeout(function () {
+        modalCNewPoem.style.opacity = "0";
+        modalCNewPoem.style.visibility = "hidden";
+        window.location.reload()
+    }, 500);
+    
+});
+
+/* window.addEventListener("click", function (e) {
+    if (e.target == modalCNewPoem) {
+        modalNewPoem.classList.toggle("modal-close-NewPoem");
+        setTimeout(function () {
+            modalCNewPoem.style.opacity = "0";
+            modalCNewPoem.style.visibility = "hidden";
+        }, 500);
+    }
+}) */

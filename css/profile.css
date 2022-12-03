@@ -1,0 +1,221 @@
+.section1 {
+    margin-top: 150px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    *background-color: #bcc9f0;
+}
+
+.account-settings {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1400px;
+    margin: auto;
+    *background-color: aqua;
+    margin-bottom: 200px;
+}
+
+.profile-details {
+    *background-color: #26cc6b;
+    display: flex;
+    justify-content: space-between;
+    *height: 405px;
+}
+
+.profesional-details {
+    background-color: #ecf0fd;
+    width: 30%;
+    *justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+}
+
+.information2 {
+    margin-left: 10px;
+    *background-color: #d3daf0;
+    min-width: 70%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.lala {
+    margin-top: 10px;
+    *margin: 10px;
+    background-color: #ecf0fd;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+}
+
+.con {
+    display: flex;
+    flex-direction: row;
+    *background-color: #d3daf0;
+}
+
+.information2 .h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: normal;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 55%;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+}
+
+.information2 .con h4 {
+    margin: 10px;
+    padding: 7px;
+
+}
+
+.con h4:first-child {
+    *background-color: #5f83f7;
+    width: 30%;
+}
+
+.con button {
+    *font-size: 14px;
+    *text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    border: none;
+    margin: 10px;
+    padding: 3px 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    transition: all 0.5s ease;
+    user-select: none;
+}
+
+.con button:hover {
+    background-color: #c4c3c3;
+}
+
+.con button:active {
+    transition: all 0.1s ease;
+    transform: scale(.9);
+}
+
+.img-container {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pen {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    position: absolute;
+    display: none;
+}
+
+.r {
+    width: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    margin-top: -7px;
+    margin-left: 8px;
+    border-radius: 50%;
+}
+
+.img-profile {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.img-profile-top {
+    margin-left: 8px;
+    margin-top: -20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.img-profile:hover {
+    cursor: pointer;
+    filter: grayscale(75%);
+    opacity: 0.5;
+}
+
+.img-container:hover .pen {
+    display: block;
+    opacity: 1;
+}
+
+.displayName {
+    text-align: center;
+    width: 300px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #dfe6ff;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+}
+
+.myProfile {
+    margin-top: 0px;
+    padding-left: 17px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    *width: 200px;
+    background-color: #ecf0fd;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+
+}
+
+#topImgName {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.myProfile2 {
+    margin-bottom: 30px;
+    padding: 17px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    *width: 200px;
+    background-color: #ecf0fd;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+}
+
+@media screen and (max-width: 800px) {
+    .profile-details {
+        *background-color: #26cc6b;
+        display: flex;
+        flex-direction: column;
+        *justify-content: space-between;
+        *height: 405px;
+    }
+
+    .profesional-details {
+        width: auto;
+    }
+
+    .information2 {
+        width: auto;
+    }
+
+}
